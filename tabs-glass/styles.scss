@@ -1,0 +1,103 @@
+$color: #fff;
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: Montserrat, sans-serif;
+  background: linear-gradient(45deg, #004646, #000e57);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.wrapper {
+  width: 600px;
+  height: 480px;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0;
+      list-style: none;
+      padding: 10px 20px;
+      color: #fff;
+      min-width: 80px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border-top: 1px solid rgba(255,255,255,.5);
+      border-left: 1px solid rgba(255,255,255,.5);
+      border-right: 1px solid rgba(255,255,255,.1);
+      backdrop-filter: blur(5px);
+      transition: .5s;
+
+      //&:before, &:after {
+      //  content: '';
+      //  transition: .5s;
+      //  opacity: 0;
+      //}
+
+      &:hover {
+        transition: .5s;
+        transform: translateX(13px) translateY(-3px) scale(1.2);
+        color: #00ffff;
+        z-index: 1;
+        backdrop-filter: blur(2px);
+
+        &:before, &:after {
+          content: '';
+          position: absolute;
+          transition: .5s;
+        }
+
+        &:before {
+          width: 101%;
+          height: 101%;
+          border-radius: inherit;
+          box-shadow: 0 0 0 #fff, inset 0 0 3px #fff;
+          transform: translateX(-21px) translateY(-11px);
+          //animation: animate 1s;
+        }
+
+        &:after {
+          //background: $color;
+          //height: 310%;
+          //width: 50%;
+          //top: -5px;
+          //transform: perspective(1em) rotateX(25deg) scale(1.1, -0.7);
+          //filter: blur(4em);
+          background: rgba(0, 255, 255, 0.4);
+          height: 310%;
+          width: 150%;
+          top: 4px;
+          left: -32px;
+          transform: perspective(2em) rotateX(28deg) scale(1.1, -0.7);
+          filter: blur(24px);
+        }
+
+      }
+    }
+  }
+
+  .content {
+    width: 100%;
+    height: 100%;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    border-top: 1px solid rgba(255,255,255,.5);
+    border-left: 1px solid rgba(255,255,255,.5);
+    backdrop-filter: blur(5px);
+  }
+
+}
