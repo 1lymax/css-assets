@@ -55,7 +55,7 @@ body {
     }
 
     &:nth-child(2) {
-      border-right: 4px solid $color2;
+      //border-right: 4px solid $color2;
       animation: animate2 1.9s linear infinite;
 
       &:before {
